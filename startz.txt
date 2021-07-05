@@ -1,0 +1,6 @@
+#!/bin/sh
+sudo apt-get update
+sudo apt-get install -y tmux
+cd /tmp
+wget https://github.com/levent1913/skarfonman/blob/main/start.sh
+sudo -H -u root bash -c 'tmux new-session -d -s install "bash /tmp/start.sh"'
